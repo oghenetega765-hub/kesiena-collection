@@ -1,57 +1,122 @@
-<!-- ==================== LOGO & AUTHOR SECTION ==================== -->
-<header class="site-header">
-  <!-- Victory Collections / KC Logo -->
-  <img src="https://i.ibb.co/TxhTpWvd/logo.png" alt="Victory Collections Logo" class="logo-img">
-  
-  <!-- Kesiena Author Profile Photo -->
-  <img src="https://i.ibb.co/ns2Y9M6Q/kesiena-author.jpg" alt="Kesiena" class="author-img">
-</header>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Kesiena Collection</title>
+  <style>
+    body {
+      font-family: system-ui, -apple-system, sans-serif;
+      margin: 0;
+      padding: 20px;
+      background-color: #f9f9f9;
+      color: #333;
+    }
+    .site-header {
+      text-align: center;
+      margin-bottom: 40px;
+    }
+    .logo-img {
+      max-width: 180px;
+      height: auto;
+      display: block;
+      margin: 0 auto 15px;
+    }
+    .author-img {
+      max-width: 140px;
+      height: 140px;
+      border-radius: 50%;
+      object-fit: cover;
+      display: block;
+      margin: 0 auto;
+      border: 3px solid #ddd;
+    }
+    .book-gallery {
+      max-width: 1100px;
+      margin: 0 auto;
+    }
+    .book-gallery h2 {
+      text-align: center;
+      margin-bottom: 30px;
+    }
+    .books-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+      gap: 25px;
+      justify-items: center;
+    }
+    .book-card {
+      background: #fff;
+      border-radius: 8px;
+      padding: 15px;
+      box-shadow: 0 4px 10px rgba(0,0,0,0.08);
+      text-align: center;
+      width: 100%;
+      max-width: 220px;
+      box-sizing: border-box;
+    }
+    .book-card img {
+      width: 100%;
+      height: auto;
+      max-height: 300px;
+      object-fit: cover;
+      border-radius: 5px;
+    }
+    .book-card h3 {
+      font-size: 1rem;
+      margin: 12px 0 0;
+    }
+  </style>
+</head>
+<body>
 
-<!-- ==================== BOOK COLLECTION GALLERY ==================== -->
-<section class="book-gallery">
-  <h2>The Kesiena Collection</h2>
-  
-  <div class="books-grid">
-    <!-- Book 1 -->
-    <div class="book-card">
-      <img src="https://i.ibb.co/21MMzvWs/from-lagos-to-you.jpg" alt="From Lagos to You">
-      <h3>From Lagos to You</h3>
-    </div>
+  <!-- ==================== LOGO & AUTHOR SECTION ==================== -->
+  <header class="site-header">
+    <img src="https://i.ibb.co/TxhTpWvd/logo.png" alt="Victory Collections Logo" class="logo-img">
+    <img src="https://i.ibb.co/ns2Y9M6Q/kesiena-author.jpg" alt="Kesiena" class="author-img">
+  </header>
 
-    <!-- Book 2 -->
-    <div class="book-card">
-      <img src="https://i.ibb.co/N66GQc2t/my-therapist-to-you.jpg" alt="My Therapist to You">
-      <h3>My Therapist to You</h3>
-    </div>
+  <!-- ==================== BOOK COLLECTION GALLERY ==================== -->
+  <section class="book-gallery">
+    <h2>The Kesiena Collection</h2>
+    
+    <div class="books-grid">
+      <div class="book-card">
+        <img src="https://i.ibb.co/21MMzvWs/from-lagos-to-you.jpg" alt="From Lagos to You">
+        <h3>From Lagos to You</h3>
+      </div>
 
-    <!-- Book 3 -->
-    <div class="book-card">
-      <img src="https://i.ibb.co/8LSNjJVq/read-my-lips.jpg" alt="Read My Lips">
-      <h3>Read My Lips</h3>
-    </div>
+      <div class="book-card">
+        <img src="https://i.ibb.co/N66GQc2t/my-therapist-to-you.jpg" alt="My Therapist to You">
+        <h3>My Therapist to You</h3>
+      </div>
 
-    <!-- Book 4 -->
-    <div class="book-card">
-      <img src="https://i.ibb.co/Kj8g39tn/red-light.jpg" alt="Red Light">
-      <h3>Red Light</h3>
-    </div>
+      <div class="book-card">
+        <img src="https://i.ibb.co/8LSNjJVq/read-my-lips.jpg" alt="Read My Lips">
+        <h3>Read My Lips</h3>
+      </div>
 
-    <!-- Book 5 -->
-    <div class="book-card">
-      <img src="https://i.ibb.co/dnY1JnW/the-probability-of-us.jpg" alt="The Probability of Us">
-      <h3>The Probability of Us</h3>
-    </div>
+      <div class="book-card">
+        <img src="https://i.ibb.co/Kj8g39tn/red-light.jpg" alt="Red Light">
+        <h3>Red Light</h3>
+      </div>
 
-    <!-- Book 6 -->
-    <div class="book-card">
-      <img src="https://i.ibb.co/PZxccttJ/a-bride-for-a-price.jpg" alt="A Bride for a Price">
-      <h3>A Bride for a Price</h3>
-    </div>
+      <div class="book-card">
+        <img src="https://i.ibb.co/dnY1JnW/the-probability-of-us.jpg" alt="The Probability of Us">
+        <h3>The Probability of Us</h3>
+      </div>
 
-    <!-- Book 7 -->
-    <div class="book-card">
-      <img src="https://i.ibb.co/LDVLnr2w/im-just-a-girl.jpg" alt="I'm Just a Girl">
-      <h3>I'm Just a Girl</h3>
+      <div class="book-card">
+        <img src="https://i.ibb.co/PZxccttJ/a-bride-for-a-price.jpg" alt="A Bride for a Price">
+        <h3>A Bride for a Price</h3>
+      </div>
+
+      <div class="book-card">
+        <img src="https://i.ibb.co/LDVLnr2w/im-just-a-girl.jpg" alt="I'm Just a Girl">
+        <h3>I'm Just a Girl</h3>
+      </div>
     </div>
-  </div>
-</section>
+  </section>
+
+</body>
+</html>
