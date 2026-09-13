@@ -47,6 +47,7 @@
       background-color: var(--bg-color);
       color: var(--text-main);
       line-height: 1.6;
+      overflow-x: hidden;
     }
 
     /* --- NAVIGATION HEADER --- */
@@ -54,7 +55,7 @@
       display: flex;
       justify-content: space-between;
       align-items: center;
-      padding: 15px 8%;
+      padding: 15px 6%;
       border-bottom: 1px solid var(--border-color);
       background-color: var(--card-bg);
       position: sticky;
@@ -65,11 +66,11 @@
     .brand {
       display: flex;
       align-items: center;
-      gap: 15px;
+      gap: 12px;
     }
 
     .brand img {
-      height: 45px;
+      height: 42px;
       width: auto;
     }
 
@@ -81,21 +82,10 @@
       letter-spacing: 1px;
     }
 
-    .nav-links {
+    .header-actions {
       display: flex;
-      gap: 20px;
       align-items: center;
-    }
-
-    .nav-links a {
-      color: var(--text-main);
-      text-decoration: none;
-      font-weight: 600;
-      font-size: 0.9rem;
-    }
-
-    .nav-links a:hover {
-      color: var(--accent-gold);
+      gap: 15px;
     }
 
     .theme-toggle-btn {
@@ -109,7 +99,121 @@
       font-size: 0.85rem;
     }
 
-    /* --- E.L. JAMES STYLE HERO BANNER --- */
+    .menu-toggle-btn {
+      background: transparent;
+      border: 1px solid var(--accent-gold);
+      color: var(--accent-gold);
+      padding: 6px 14px;
+      border-radius: 6px;
+      cursor: pointer;
+      font-size: 1.2rem;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+
+    /* --- SIDEBAR OVERLAY & DRAWER --- */
+    .sidebar-overlay {
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100vw;
+      height: 100vh;
+      background: rgba(0, 0, 0, 0.6);
+      backdrop-filter: blur(4px);
+      z-index: 998;
+      opacity: 0;
+      pointer-events: none;
+      transition: opacity 0.3s ease;
+    }
+
+    .sidebar-overlay.active {
+      opacity: 1;
+      pointer-events: auto;
+    }
+
+    .sidebar {
+      position: fixed;
+      top: 0;
+      right: -320px;
+      width: 300px;
+      height: 100vh;
+      background: var(--card-bg);
+      border-left: 1px solid var(--border-color);
+      box-shadow: var(--shadow);
+      z-index: 999;
+      display: flex;
+      flex-direction: column;
+      padding: 30px 25px;
+      transition: right 0.3s ease;
+    }
+
+    .sidebar.active {
+      right: 0;
+    }
+
+    .sidebar-header {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      margin-bottom: 30px;
+      padding-bottom: 15px;
+      border-bottom: 1px solid var(--border-color);
+    }
+
+    .sidebar-title {
+      font-family: 'Cinzel', serif;
+      font-size: 1.1rem;
+      color: var(--accent-gold);
+    }
+
+    .close-btn {
+      background: transparent;
+      border: none;
+      color: var(--text-main);
+      font-size: 1.5rem;
+      cursor: pointer;
+    }
+
+    .sidebar-nav {
+      display: flex;
+      flex-direction: column;
+      gap: 20px;
+    }
+
+    .sidebar-nav a {
+      color: var(--text-main);
+      text-decoration: none;
+      font-size: 1.05rem;
+      font-weight: 600;
+      display: flex;
+      align-items: center;
+      gap: 10px;
+      padding: 8px 0;
+    }
+
+    .sidebar-nav a:hover {
+      color: var(--accent-gold);
+    }
+
+    .sidebar-divider {
+      height: 1px;
+      background: var(--border-color);
+      margin: 25px 0;
+    }
+
+    .sidebar-info {
+      font-size: 0.85rem;
+      color: var(--text-muted);
+    }
+
+    .sidebar-info h4 {
+      font-family: 'Cinzel', serif;
+      color: var(--accent-gold);
+      margin-bottom: 8px;
+    }
+
+    /* --- HERO BANNER --- */
     .hero-banner {
       max-width: 1200px;
       margin: 30px auto;
@@ -123,12 +227,11 @@
     }
 
     .banner-text {
-      flex: 1 1 500px;
+      flex: 1 1 450px;
       padding: 50px 40px;
       display: flex;
       flex-direction: column;
       justify-content: center;
-      color: #ffffff;
     }
 
     .script-welcome {
@@ -314,11 +417,6 @@
       border-color: var(--available-green);
     }
 
-    .book-card:hover .btn-read:not(.available-btn) {
-      background: var(--accent-gold);
-      color: #0d0f14;
-    }
-
     /* --- CONTACT SECTION --- */
     .contact-section {
       max-width: 1200px;
@@ -336,7 +434,7 @@
 
     .contact-grid {
       display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+      grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
       gap: 30px;
       margin-top: 30px;
     }
@@ -363,14 +461,16 @@
       margin-bottom: 10px;
       font-size: 0.95rem;
       display: flex;
+      flex-wrap: wrap;
       align-items: center;
-      gap: 10px;
+      gap: 8px;
     }
 
     .contact-info-list a {
       color: var(--text-main);
       text-decoration: none;
       font-weight: 600;
+      word-break: break-all;
     }
 
     .contact-info-list a:hover {
@@ -379,11 +479,66 @@
 
     footer {
       text-align: center;
-      padding: 30px 20px;
+      padding: 25px 15px;
       border-top: 1px solid var(--border-color);
       color: var(--text-muted);
       font-size: 0.85rem;
       background: var(--card-bg);
+    }
+
+    /* --- MOBILE RESPONSIVE --- */
+    @media (max-width: 768px) {
+      header {
+        padding: 12px 18px;
+      }
+
+      .brand-title {
+        font-size: 1.05rem;
+      }
+
+      .hero-banner {
+        margin: 15px 12px;
+      }
+
+      .banner-text {
+        padding: 30px 20px;
+        flex: 1 1 100%;
+      }
+
+      .script-welcome {
+        font-size: 2.8rem;
+      }
+
+      .author-name-heading {
+        font-size: 1.4rem;
+      }
+
+      .banner-image {
+        min-height: 300px;
+        flex: 1 1 100%;
+      }
+
+      .gallery-container {
+        padding: 30px 15px;
+      }
+
+      .contact-section {
+        padding: 0 12px;
+      }
+
+      .contact-card {
+        padding: 25px 18px;
+      }
+    }
+
+    @media (max-width: 480px) {
+      .books-grid {
+        grid-template-columns: 1fr;
+      }
+
+      .cover-wrapper {
+        height: 380px;
+      }
     }
   </style>
 </head>
@@ -395,14 +550,37 @@
       <img src="https://i.ibb.co/TxhTpWvd/logo.png" alt="Victory Collections Logo">
       <span class="brand-title">Victory Collections</span>
     </div>
-    <div class="nav-links">
-      <a href="#books">Books</a>
-      <a href="#contact">Contact</a>
+    
+    <div class="header-actions">
       <button class="theme-toggle-btn" id="themeToggleBtn">☀️ Light</button>
+      <button class="menu-toggle-btn" id="openSidebarBtn" aria-label="Open Menu">☰</button>
     </div>
   </header>
 
-  <!-- HERO BANNER (E.L. JAMES STYLE) -->
+  <!-- SIDEBAR OVERLAY & DRAWER -->
+  <div class="sidebar-overlay" id="sidebarOverlay"></div>
+
+  <aside class="sidebar" id="sidebar">
+    <div class="sidebar-header">
+      <span class="sidebar-title">Menu</span>
+      <button class="close-btn" id="closeSidebarBtn">&times;</button>
+    </div>
+
+    <nav class="sidebar-nav">
+      <a href="#" class="sidebar-link">📚 Home</a>
+      <a href="#books" class="sidebar-link">📖 Books Gallery</a>
+      <a href="#contact" class="sidebar-link">✉️ Contact Author</a>
+    </nav>
+
+    <div class="sidebar-divider"></div>
+
+    <div class="sidebar-info">
+      <h4>Akpovoka Kesiena</h4>
+      <p>Nigerian Author & Contemporary Fiction Writer.</p>
+    </div>
+  </aside>
+
+  <!-- HERO BANNER -->
   <section class="hero-banner">
     <div class="banner-text">
       <div class="script-welcome">Welcome</div>
@@ -562,8 +740,9 @@
     <p>&copy; 2026 Victory Collections | Akpovoka Kesiena. All Rights Reserved.</p>
   </footer>
 
-  <!-- SCRIPT -->
+  <!-- JAVASCRIPT -->
   <script>
+    // Theme Toggle
     const themeBtn = document.getElementById('themeToggleBtn');
     const htmlTag = document.documentElement;
 
@@ -576,6 +755,31 @@
         htmlTag.setAttribute('data-theme', 'dark');
         themeBtn.textContent = '☀️ Light';
       }
+    });
+
+    // Sidebar Toggle
+    const openSidebarBtn = document.getElementById('openSidebarBtn');
+    const closeSidebarBtn = document.getElementById('closeSidebarBtn');
+    const sidebar = document.getElementById('sidebar');
+    const sidebarOverlay = document.getElementById('sidebarOverlay');
+    const sidebarLinks = document.querySelectorAll('.sidebar-link');
+
+    function openSidebar() {
+      sidebar.classList.add('active');
+      sidebarOverlay.classList.add('active');
+    }
+
+    function closeSidebar() {
+      sidebar.classList.remove('active');
+      sidebarOverlay.classList.remove('active');
+    }
+
+    openSidebarBtn.addEventListener('click', openSidebar);
+    closeSidebarBtn.addEventListener('click', closeSidebar);
+    sidebarOverlay.addEventListener('click', closeSidebar);
+
+    sidebarLinks.forEach(link => {
+      link.addEventListener('click', closeSidebar);
     });
   </script>
 </body>
