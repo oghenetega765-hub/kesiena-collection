@@ -1,0 +1,20 @@
+backend:
+  name: git-gateway
+  branch: main
+
+media_folder: "assets"
+public_folder: "assets"
+
+collections:
+  - name: "chapters"
+    label: "Book Chapters"
+    folder: "content/chapters"
+    create: true
+    slug: "{{year}}-{{month}}-{{day}}-{{slug}}"
+    fields:
+      - { label: "Chapter Title", name: "title", widget: "string" }
+      - { label: "Publish Date", name: "date", widget: "datetime" }
+      - { label: "Select Book", name: "book", widget: "select", options: ["The Probability of Us", "From Lagos to You", "Read My Lips", "A Bride for a Price", "I'm Just a Girl", "Red Light", "My Therapist to You"] }
+      - { label: "Chapter Number", name: "chapter_number", widget: "number", value_type: "int" }
+      - { label: "Facebook Post Embed Code (Optional)", name: "facebook_embed", widget: "text", required: false }
+      - { label: "Chapter Content", name: "body", widget: "markdown" }
