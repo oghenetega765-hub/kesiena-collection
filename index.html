@@ -3,35 +3,35 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Kesiena Collection | Akpovoka Kesiena</title>
+  <title>Akpovoka Kesiena | Official Author Website</title>
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@600;700;800&family=Plus+Jakarta+Sans:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Alex+Brush&family=Cinzel:wght@600;700;800&family=Plus+Jakarta+Sans:wght@400;500;600;700&display=swap" rel="stylesheet">
   
   <style>
     :root {
-      --bg-color: #0b0c10;
-      --card-bg: #15171e;
-      --text-main: #f0f0f5;
-      --text-muted: #a0a5b5;
+      --bg-color: #0d0f14;
+      --card-bg: #161922;
+      --banner-bg: #1f2430;
+      --text-main: #f0f2f8;
+      --text-muted: #a0a7ba;
       --accent-gold: #d4af37;
       --accent-gold-hover: #f3ce56;
-      --border-color: #262936;
-      --badge-bg: rgba(212, 175, 55, 0.15);
-      --badge-text: #d4af37;
+      --border-color: #2a2f40;
+      --available-green: #2ecc71;
       --shadow: 0 12px 30px rgba(0, 0, 0, 0.5);
     }
 
     [data-theme="light"] {
-      --bg-color: #f8f9fa;
+      --bg-color: #f4f6f9;
       --card-bg: #ffffff;
-      --text-main: #1a1a24;
-      --text-muted: #5a6072;
+      --banner-bg: #3d4a58;
+      --text-main: #1a1e29;
+      --text-muted: #5e6678;
       --accent-gold: #b8860b;
       --accent-gold-hover: #966d09;
-      --border-color: #e2e8f0;
-      --badge-bg: rgba(184, 134, 11, 0.12);
-      --badge-text: #b8860b;
+      --border-color: #e1e5ee;
+      --available-green: #27ae60;
       --shadow: 0 10px 25px rgba(0, 0, 0, 0.08);
     }
 
@@ -49,12 +49,12 @@
       line-height: 1.6;
     }
 
-    /* --- NAVIGATION & HEADER --- */
+    /* --- NAVIGATION HEADER --- */
     header {
       display: flex;
       justify-content: space-between;
       align-items: center;
-      padding: 20px 8%;
+      padding: 15px 8%;
       border-bottom: 1px solid var(--border-color);
       background-color: var(--card-bg);
       position: sticky;
@@ -69,7 +69,7 @@
     }
 
     .brand img {
-      height: 48px;
+      height: 45px;
       width: auto;
     }
 
@@ -81,60 +81,115 @@
       letter-spacing: 1px;
     }
 
+    .nav-links {
+      display: flex;
+      gap: 20px;
+      align-items: center;
+    }
+
+    .nav-links a {
+      color: var(--text-main);
+      text-decoration: none;
+      font-weight: 600;
+      font-size: 0.9rem;
+    }
+
+    .nav-links a:hover {
+      color: var(--accent-gold);
+    }
+
     .theme-toggle-btn {
       background: transparent;
       border: 1px solid var(--border-color);
       color: var(--text-main);
-      padding: 8px 16px;
+      padding: 6px 14px;
       border-radius: 20px;
       cursor: pointer;
       font-weight: 600;
       font-size: 0.85rem;
+    }
+
+    /* --- E.L. JAMES STYLE HERO BANNER --- */
+    .hero-banner {
+      max-width: 1200px;
+      margin: 30px auto;
+      background: var(--banner-bg);
+      border-radius: 12px;
+      overflow: hidden;
       display: flex;
-      align-items: center;
-      gap: 8px;
+      flex-wrap: wrap;
+      box-shadow: var(--shadow);
+      border: 1px solid var(--border-color);
     }
 
-    .theme-toggle-btn:hover {
-      border-color: var(--accent-gold);
+    .banner-text {
+      flex: 1 1 500px;
+      padding: 50px 40px;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      color: #ffffff;
+    }
+
+    .script-welcome {
+      font-family: 'Alex Brush', cursive;
+      font-size: 3.5rem;
       color: var(--accent-gold);
-    }
-
-    /* --- HERO SECTION --- */
-    .hero {
-      text-align: center;
-      padding: 60px 20px 40px;
-      max-width: 800px;
-      margin: 0 auto;
-    }
-
-    .author-avatar {
-      width: 130px;
-      height: 130px;
-      border-radius: 50%;
-      object-fit: cover;
-      border: 3px solid var(--accent-gold);
-      box-shadow: 0 0 25px rgba(212, 175, 55, 0.25);
-      margin-bottom: 20px;
-    }
-
-    .hero h1 {
-      font-family: 'Cinzel', serif;
-      font-size: 2.5rem;
-      color: var(--text-main);
       margin-bottom: 10px;
     }
 
-    .hero p {
-      color: var(--text-muted);
-      font-size: 1.1rem;
+    .author-name-heading {
+      font-family: 'Cinzel', serif;
+      font-size: 1.8rem;
+      margin-bottom: 15px;
+      letter-spacing: 1px;
+    }
+
+    .bio-text {
+      font-size: 0.98rem;
+      line-height: 1.8;
+      color: #d1d5db;
+      margin-bottom: 25px;
+    }
+
+    .btn-browse {
+      display: inline-block;
+      align-self: flex-start;
+      padding: 12px 28px;
+      border: 2px solid var(--accent-gold);
+      color: #ffffff;
+      text-decoration: none;
+      font-weight: 700;
+      font-size: 0.85rem;
+      letter-spacing: 1.5px;
+      text-transform: uppercase;
+      transition: all 0.3s ease;
+    }
+
+    .btn-browse:hover {
+      background: var(--accent-gold);
+      color: #0d0f14;
+    }
+
+    .banner-image {
+      flex: 1 1 350px;
+      min-height: 400px;
+      position: relative;
+    }
+
+    .banner-image img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      object-position: center top;
+      display: block;
     }
 
     /* --- GALLERY SECTION --- */
     .gallery-container {
       max-width: 1200px;
       margin: 0 auto;
-      padding: 40px 20px 80px;
+      padding: 40px 20px;
     }
 
     .section-title {
@@ -161,7 +216,6 @@
       gap: 30px;
     }
 
-    /* --- BOOK CARD --- */
     .book-card {
       background: var(--card-bg);
       border: 1px solid var(--border-color);
@@ -173,14 +227,12 @@
       text-decoration: none;
       color: inherit;
       position: relative;
-      transform: translateY(0);
-      transition: transform 0.3s ease, border-color 0.3s ease, box-shadow 0.3s ease;
+      transition: transform 0.3s ease, border-color 0.3s ease;
     }
 
     .book-card:hover {
       transform: translateY(-8px);
       border-color: var(--accent-gold);
-      box-shadow: 0 16px 35px rgba(0, 0, 0, 0.3);
     }
 
     .cover-wrapper {
@@ -206,15 +258,20 @@
       position: absolute;
       top: 15px;
       right: 15px;
-      background: rgba(11, 12, 16, 0.85);
+      background: rgba(13, 15, 20, 0.85);
       border: 1px solid var(--accent-gold);
       color: var(--accent-gold);
       padding: 4px 12px;
       border-radius: 20px;
       font-size: 0.75rem;
       font-weight: 700;
-      letter-spacing: 0.5px;
       backdrop-filter: blur(4px);
+    }
+
+    .status-badge.available {
+      border-color: var(--available-green);
+      color: var(--available-green);
+      background: rgba(46, 204, 113, 0.15);
     }
 
     .card-body {
@@ -230,7 +287,6 @@
       font-size: 1.15rem;
       font-weight: 700;
       margin-bottom: 8px;
-      color: var(--text-main);
     }
 
     .author-name {
@@ -249,16 +305,78 @@
       font-weight: 600;
       font-size: 0.85rem;
       text-align: center;
-      cursor: pointer;
       transition: background 0.3s ease, color 0.3s ease;
     }
 
-    .book-card:hover .btn-read {
-      background: var(--accent-gold);
-      color: #0b0c10;
+    .btn-read.available-btn {
+      background: var(--available-green);
+      color: #ffffff;
+      border-color: var(--available-green);
     }
 
-    /* --- FOOTER --- */
+    .book-card:hover .btn-read:not(.available-btn) {
+      background: var(--accent-gold);
+      color: #0d0f14;
+    }
+
+    /* --- CONTACT SECTION --- */
+    .contact-section {
+      max-width: 1200px;
+      margin: 40px auto 80px;
+      padding: 0 20px;
+    }
+
+    .contact-card {
+      background: var(--card-bg);
+      border: 1px solid var(--border-color);
+      border-radius: 12px;
+      padding: 40px;
+      box-shadow: var(--shadow);
+    }
+
+    .contact-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+      gap: 30px;
+      margin-top: 30px;
+    }
+
+    .contact-box h3 {
+      font-family: 'Cinzel', serif;
+      color: var(--accent-gold);
+      margin-bottom: 12px;
+      font-size: 1.2rem;
+    }
+
+    .contact-box p {
+      color: var(--text-muted);
+      font-size: 0.95rem;
+      margin-bottom: 15px;
+    }
+
+    .contact-info-list {
+      list-style: none;
+      margin-top: 15px;
+    }
+
+    .contact-info-list li {
+      margin-bottom: 10px;
+      font-size: 0.95rem;
+      display: flex;
+      align-items: center;
+      gap: 10px;
+    }
+
+    .contact-info-list a {
+      color: var(--text-main);
+      text-decoration: none;
+      font-weight: 600;
+    }
+
+    .contact-info-list a:hover {
+      color: var(--accent-gold);
+    }
+
     footer {
       text-align: center;
       padding: 30px 20px;
@@ -271,31 +389,56 @@
 </head>
 <body>
 
-  <!-- HEADER -->
+  <!-- NAVIGATION HEADER -->
   <header>
     <div class="brand">
       <img src="https://i.ibb.co/TxhTpWvd/logo.png" alt="Victory Collections Logo">
       <span class="brand-title">Victory Collections</span>
     </div>
-    <button class="theme-toggle-btn" id="themeToggleBtn">
-      <span id="themeIcon">☀️</span> <span id="themeText">Light Mode</span>
-    </button>
+    <div class="nav-links">
+      <a href="#books">Books</a>
+      <a href="#contact">Contact</a>
+      <button class="theme-toggle-btn" id="themeToggleBtn">☀️ Light</button>
+    </div>
   </header>
 
-  <!-- HERO -->
-  <section class="hero">
-    <img src="https://i.ibb.co/ns2Y9M6Q/kesiena-author.jpg" alt="Akpovoka Kesiena" class="author-avatar">
-    <h1>Akpovoka Kesiena</h1>
-    <p>Official Author Portfolio & Novel Collection</p>
+  <!-- HERO BANNER (E.L. JAMES STYLE) -->
+  <section class="hero-banner">
+    <div class="banner-text">
+      <div class="script-welcome">Welcome</div>
+      <h1 class="author-name-heading">Akpovoka Kesiena</h1>
+      <p class="bio-text">
+        Kesiena is a Nigerian author and creative writer whose work explores love, friendship, self-discovery, faith, family, womanhood, emotional growth, and the experiences that shape young people. Her website is a home for her books, stories, reflections, and writing journey. Through her writing, she explores the realities of growing up, navigating relationships, discovering identity, understanding womanhood, and finding strength through life's experiences.
+      </p>
+      <a href="#books" class="btn-browse">Browse Books</a>
+    </div>
+    <div class="banner-image">
+      <img src="https://i.ibb.co/ns2Y9M6Q/kesiena-author.jpg" alt="Akpovoka Kesiena">
+    </div>
   </section>
 
-  <!-- GALLERY -->
-  <main class="gallery-container">
+  <!-- BOOK GALLERY -->
+  <main class="gallery-container" id="books">
     <h2 class="section-title">The Kesiena Collection</h2>
     
     <div class="books-grid">
 
-      <!-- Book 1 -->
+      <!-- Book 1 (AVAILABLE NOW) -->
+      <a href="read.html?book=the-probability-of-us" class="book-card">
+        <div class="cover-wrapper">
+          <span class="status-badge available">AVAILABLE NOW</span>
+          <img src="https://i.ibb.co/dnY1JnW/the-probability-of-us.jpg" alt="The Probability of Us">
+        </div>
+        <div class="card-body">
+          <div>
+            <h3 class="book-title">The Probability of Us</h3>
+            <p class="author-name">By Akpovoka Kesiena</p>
+          </div>
+          <div class="btn-read available-btn">Read Now</div>
+        </div>
+      </a>
+
+      <!-- Book 2 (COMING SOON) -->
       <a href="read.html?book=from-lagos-to-you" class="book-card">
         <div class="cover-wrapper">
           <span class="status-badge">COMING SOON</span>
@@ -310,7 +453,7 @@
         </div>
       </a>
 
-      <!-- Book 2 -->
+      <!-- Book 3 (COMING SOON) -->
       <a href="read.html?book=my-therapist-to-you" class="book-card">
         <div class="cover-wrapper">
           <span class="status-badge">COMING SOON</span>
@@ -325,7 +468,7 @@
         </div>
       </a>
 
-      <!-- Book 3 -->
+      <!-- Book 4 (COMING SOON) -->
       <a href="read.html?book=read-my-lips" class="book-card">
         <div class="cover-wrapper">
           <span class="status-badge">COMING SOON</span>
@@ -340,7 +483,7 @@
         </div>
       </a>
 
-      <!-- Book 4 -->
+      <!-- Book 5 (COMING SOON) -->
       <a href="read.html?book=red-light" class="book-card">
         <div class="cover-wrapper">
           <span class="status-badge">COMING SOON</span>
@@ -355,22 +498,7 @@
         </div>
       </a>
 
-      <!-- Book 5 -->
-      <a href="read.html?book=the-probability-of-us" class="book-card">
-        <div class="cover-wrapper">
-          <span class="status-badge">COMING SOON</span>
-          <img src="https://i.ibb.co/dnY1JnW/the-probability-of-us.jpg" alt="The Probability of Us">
-        </div>
-        <div class="card-body">
-          <div>
-            <h3 class="book-title">The Probability of Us</h3>
-            <p class="author-name">By Akpovoka Kesiena</p>
-          </div>
-          <div class="btn-read">Preview & Details</div>
-        </div>
-      </a>
-
-      <!-- Book 6 -->
+      <!-- Book 6 (COMING SOON) -->
       <a href="read.html?book=a-bride-for-a-price" class="book-card">
         <div class="cover-wrapper">
           <span class="status-badge">COMING SOON</span>
@@ -385,7 +513,7 @@
         </div>
       </a>
 
-      <!-- Book 7 -->
+      <!-- Book 7 (COMING SOON) -->
       <a href="read.html?book=im-just-a-girl" class="book-card">
         <div class="cover-wrapper">
           <span class="status-badge">COMING SOON</span>
@@ -403,6 +531,32 @@
     </div>
   </main>
 
+  <!-- CONTACT SECTION -->
+  <section class="contact-section" id="contact">
+    <div class="contact-card">
+      <h2 class="section-title">Get In Touch</h2>
+      <div class="contact-grid">
+        <div class="contact-box">
+          <h3>For Readers</h3>
+          <p>Questions, feedback, and messages are always welcome!</p>
+          <ul class="contact-info-list">
+            <li><strong>Email:</strong> <a href="mailto:vickykessy58@gmail.com">vickykessy58@gmail.com</a></li>
+            <li><strong>WhatsApp:</strong> <a href="https://wa.me/2349045682675" target="_blank">09045682675</a></li>
+            <li><strong>Social Media:</strong> classic kesyx</li>
+          </ul>
+        </div>
+        <div class="contact-box">
+          <h3>Professional Inquiries</h3>
+          <p>Publishing, collaborations, speaking engagements, and writing opportunities.</p>
+          <ul class="contact-info-list">
+            <li><strong>Phone:</strong> <a href="tel:09045682675">09045682675</a></li>
+            <li><strong>Direct Email:</strong> <a href="mailto:vickykessy58@gmail.com">vickykessy58@gmail.com</a></li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </section>
+
   <!-- FOOTER -->
   <footer>
     <p>&copy; 2026 Victory Collections | Akpovoka Kesiena. All Rights Reserved.</p>
@@ -411,20 +565,16 @@
   <!-- SCRIPT -->
   <script>
     const themeBtn = document.getElementById('themeToggleBtn');
-    const themeIcon = document.getElementById('themeIcon');
-    const themeText = document.getElementById('themeText');
     const htmlTag = document.documentElement;
 
     themeBtn.addEventListener('click', () => {
       const currentTheme = htmlTag.getAttribute('data-theme');
       if (currentTheme === 'dark') {
         htmlTag.setAttribute('data-theme', 'light');
-        themeIcon.textContent = '🌙';
-        themeText.textContent = 'Dark Mode';
+        themeBtn.textContent = '🌙 Dark';
       } else {
         htmlTag.setAttribute('data-theme', 'dark');
-        themeIcon.textContent = '☀️';
-        themeText.textContent = 'Light Mode';
+        themeBtn.textContent = '☀️ Light';
       }
     });
   </script>
